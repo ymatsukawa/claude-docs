@@ -1,7 +1,7 @@
 **prompts**
 
 ```
-I want to process ./instruction_template.md, do it in ultrathink mode.
+I want to process ./instruction_template.md, so follow "Workflow" and do it in ultrathink mode.
 ```
 
 ---
@@ -35,7 +35,8 @@ TBD
 - xxx
 
 ## Workflow
-- [ ] xxx
+- [ ] Understand this content and context.
+  - [ ] If there are any unclear points, stop workflow and show detailed error to requester.
 - [ ] xxx
 - [ ] xxx
 - [ ] xxx
