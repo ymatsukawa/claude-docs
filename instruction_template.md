@@ -9,13 +9,13 @@ I want to process ./instruction_template.md, so follow "Workflow" and do it in u
 # {What you want to do}
 
 ## Goal
-TBD
+TBD - long term goal
 
 ## Background - Why
 TBD
 
 ## First Goal
-TBD
+TBD - very short term goal
 
 
 ## Current State
