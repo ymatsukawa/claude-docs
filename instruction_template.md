@@ -1,3 +1,11 @@
+**prompts**
+
+```
+I want to process ./instruction_template.md, do it in ultrathink mode.
+```
+
+---
+
 # {What you want to do}
 
 ## Goal
