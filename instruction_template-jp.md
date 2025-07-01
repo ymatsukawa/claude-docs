@@ -1,7 +1,7 @@
 **prompts**
 
 ```
-./instruction_template.md に記載された内容を実現したい. Workflow に従って ultrathink mode で実行せよ
+./instruction_template-jp.md に記載された内容を実現したい. Workflow に従って ultrathink mode で実行せよ
 ```
 
 ---
