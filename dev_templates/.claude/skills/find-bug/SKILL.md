@@ -55,6 +55,9 @@ After investigation:
 ## Reason
 {Why this bug happened}
 
+## Scope of Influence
+{Show scope of Influence}
+
 ## Reproduction Example
 {Show how bug occurs}
 
@@ -85,6 +88,9 @@ After investigation:
 ## Reason
 When argument passed around x < 0, repository layer panics
 
+## Scope of Influence
+All of modules that use UserRepository.find
+
 ## Reproduction Example
 `u, err := UserRepository.find(x)` << When `x` is -1, panics
 
@@ -96,9 +102,10 @@ When argument passed around x < 0, repository layer panics
 ## Fix Recommendations
 
 ### Plan 1
-(Recommended) Guard in service layer.
-Repository layer should not validate data range.
+(Recommended) Validate in repository layer and return nil.
+Because many 100+ modules uses target repository
 
 ### Plan 2
-Validate in repository layer.
+Guard in service layer.
+Repository layer should not validate data range.
 ```
