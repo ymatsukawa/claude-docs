@@ -1,2 +1,4 @@
 /blacksmith/*
 !/blacksmith/CLAUDE-template.md
+
+/tmp
