@@ -1,50 +1,50 @@
 # Research AsIs Task
 ## Goal
-Researching features and functions of
+Researching the features and functions of:
 
 * `xxx`
 * `xxx`
 
 ## Background - Why
-I joined this repository yesterday and begun modifications for business,
-but have no shallow/deep knowledge around this.
+I joined this repository yesterday and began modifications for the business,
+but have neither shallow nor deep knowledge of it.
 
-Another dev workers had been left, so I should do alone.
-So, I want you as supporter to research features and functions.
+The other dev worker has left, so I have to do this alone.
+So, I want you as a supporter to research features and functions.
 
 ## Definitions
 **research**:
-From current branch, to watch source code and gather information.
-And to organize "features" and "functions".
+From the current branch, read the source code and gather information.
+Then organize the "features" and "functions".
 
 **features**:
 What it is.
-This is for user's point of view.
-In other words, it's required "acceptance test case".
+This is from the user's point of view.
+In other words, this is the required "acceptance test case".
 
 **functions**:
 How it works.
-This is for dev worker's point of view.
+This is from the developer's point of view.
 
-* Why happens so?
-* What is route?
-* What is class/method and logics?
-* What is DB table(s)?
+* Why does it happen?
+* What is the route?
+* What are the classes/methods and their logic?
+* What DB table(s) are involved?
 
 ## Prohibition
 * Launching server including DB
 * Editing exist files
 * Accessing external API
-* Read under `tmp/`
+* Reading anything under `tmp/`
 
 ## Workflow
 There are mainly two steps.
 
-### Given workflow statement
+### Workflow ground rules
 * Output should be Japanese/UTF-8
 
 ### 1st step - for features
-Goal is covering feature about target route(s)
+Goal is to cover the features of the target route(s).
 
 Summary:
 
@@ -55,43 +55,43 @@ Summary:
 
 Detail:
 
-* [ ] Receive route(s) from user
-  * If route(s) is not pointed, stop workflow
-* [ ] **Before start follows, AskUserQuestion 5+ for clear researching contents.**
-* [ ] Research under route(s) controller / model / view
-* [ ] Gather info as "acceptance test cases"
-* [ ] Output info as "Gherkin Style test"
+* [ ] Receive route(s) from the user
+  * If no route is specified, stop the workflow.
+* [ ] **Before start follows, AskUserQuestion 5+ times to clarify the research scope.**
+* [ ] Research the controller / model / view for the route(s)
+* [ ] Gather information to form "acceptance test cases"
+* [ ] Output the information as "Gherkin-style tests"
   * Follow "Output format → Gherkin Style Test Cases"
   * File should be `report/{yyyymmdd-HHMM}-{title}-feature.md`
 
 ### 2nd step - for functions
-Goal is covering functions about features
+Goal is to cover the functions behind the features.
 
 Summary:
 
 * Input:
   * Feature file path of 1st step
 * Output:
-  * Plant uml sequence diagram; related to targets
-  * Plant uml ER diagram; related to targets
+  * PlantUML sequence diagram; related to targets
+  * PlantUML ER diagram; related to targets
 
 Detail:
 
-* [ ] Receive feature file path from user
-  * If feature file path is not pointed, stop workflow
-* [ ] **Before start follows, AskUserQuestion 5+ for clear researching contents.**
-* [ ] Research under route(s) / controller / model / view
+* [ ] Receive the feature file path from the user.
+  * If no feature file path is specified, stop the workflow.
+* [ ] **Before start follows, AskUserQuestion 5+ times to clarify the research scope.**
+* [ ] Research the route(s) / controller / model / view
 * [ ] Gather info for sequence diagram
-* [ ] Output sequence diagram
+* [ ] Output the sequence diagram
   * File should be `report/{yyyymmdd-HHMM}-{title}-function-sequence.puml`
 * [ ] Gather info for ER diagram
-* [ ] Output ER diagram
+* [ ] Output the ER diagram
   * File should be `report/{yyyymmdd-HHMM}-{title}-function-er.puml`
 
 ### 3rd step - summarization
-Goal is making summary report from "features" for PdM and PM.
+Goal is to make a summary report from the "features" for PdM and PM.
 
-Think situation: new PdM and PM joined and you explain what is this system without technical words.
+Imagine this situation: a new PdM and PM have joined, and you explain what this system is without using technical terms.
 
 Summary:
 
@@ -102,19 +102,19 @@ Summary:
 
 Details:
 
-* [ ] Receive feature file path from user
-  * If feature file path is not pointed, stop workflow
-* [ ] **Before start follows, AskUserQuestion 5+ for clear researching contents.**
+* [ ] Receive the feature file path from the user.
+  * If no feature file path is specified, stop the workflow.
+* [ ] **Before start follows, AskUserQuestion 5+ times to clarify the research scope.**
 * [ ] Read feature file(s) to understand specifications.
-* [ ] Organize specifications
-* [ ] Output basic specifications as markdown
+* [ ] Organize the specifications
+* [ ] Output the basic specifications as markdown
   * Follow "Output format → Basic spec format"
-  * File should be `report/{yyyymmdd-HHMM}-{title}-basic-step.md`
+  * File should be `report/{yyyymmdd-HHMM}-{title}-basic-spec.md`
 
 **Remarks**:
-* No technical words for developers like `variable`, `class`, `DB`, `file`
-* Think markdown reader as "Most near by end user"
-* Format should follow
+* Avoid developer-only technical terms like `variable`, `class`, `DB`, `file`.
+* Think of the markdown reader as "closest to the end user".
+* The output format should follow the spec below.
 
 ## Output format
 ### Gherkin Style Test Cases
@@ -123,18 +123,16 @@ Details:
 ## Feature: Listing blog contents
 
 * Given: User is logged in as editor.
-* When: User go to `/blogs`.
-* And: Clicked button "list".
+* When: The user goes to `/blogs`.
+* And: The user clicks the "list" button.
 * Then: 10 blog items are shown in `/blogs`.
-* And: At the bottom, user can see pagination.
+* And: At the bottom, the user can see pagination.
 
 ## Feature: Editing blog contents
 </example>
-...
-```
 
 **Remarks**:
-When output as Japanese, style should be
+When outputting in Japanese, the style should be:
 * Given: `だ/である`
 * When: `だ/である`
 * Then: `だ/である` + `こと`
@@ -157,7 +155,7 @@ Examples:
 * (1) Showing blog
   * Anonymous user can read blog content without authentication.
 * (2) Editing blog
-  * Authenticated writer can edit blog content from edit page.
+  * An authenticated writer can edit blog content from the edit page.
 * ...
 * (N) {Feature Name}
   * {Explanation in 20 words}
@@ -165,7 +163,7 @@ Examples:
 ## Feature specs
 ### (1) Showing blog
 **What it does**
-Anonymous user can read blog without authentication.
+An anonymous user can read the blog without authentication.
 
 **Who uses it & when**
 * Persona: Anonymous user
@@ -174,18 +172,18 @@ Anonymous user can read blog without authentication.
 
 **Current Behavior - valid/invalid**
 * valid
-  * Can be shown blog content
-  * Cannot be shown blog content if content is hidden mode
+  * Blog content is shown.
+  * Blog content is not shown if the content is in hidden mode.
 * invalid
-  * 404 Error when access to non exist blog content
+  * 404 error when accessing non-existent blog content.
 
 ## Matters require ATTENTION
-* Specification is status on 20260-04-01
+* This specification is current as of 2026-04-01.
 * "Writer" means "Authenticated user"
 ```
 
 **Remarks**:
-When output as Japanese, style should be `だ/である`
+When outputting in Japanese, the style should be: `だ/である`
 
 Example:
 ```
@@ -208,7 +206,7 @@ Example:
 **挙動 - 正常/異常**
 * 正常
   * ブログコンテンツが表示される
-  * ライターが隠しモードにしている今鉄は表示されない
+  * ライターが隠しモードにしている場合は表示されない
 * invalid
   * 存在しないブログコンテンツにアクセスすると404が表示される
 
