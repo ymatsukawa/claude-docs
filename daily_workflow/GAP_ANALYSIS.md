@@ -1,29 +1,29 @@
-# Business Gap ANALYSIS
+# Business Gap Analysis
 ## Goal
-Finding business gap analysis from AsIs sheet and ToBe sheet.
+Find business gaps by comparing the AsIs sheet and the ToBe sheet.
 
 ## Background - Why
-I joined this repository yesterday and begun modifications for business,
-but have no knowledge around this.
+I joined this repository yesterday and began making business modifications,
+but I have no background knowledge about it.
 
-I got target feature AsIs, and begin to gap analysis.
-So, I want you as supporter to research "the gap".
+I have the target feature's AsIs, and want to begin a gap analysis.
+So, I want you to support me by researching "the gap".
 
 ## Definitions
 **gap**:
-Space between AsIs and ToBe.
-In other word, "problem".
+The space between AsIs and ToBe.
+In other words, the "problem".
 
 **feature(s)**:
 What it is.
-This is for user's point of view.
-In other words, basic specification without technical word.
+This is from the user's point of view.
+In other words, the basic specification without technical terms.
 
 ## Prohibition
-* Launching server including DB
-* Editing exist files
-* Accessing external API
-* Read under `tmp/`
+* Launching servers, including the DB
+* Editing existing files
+* Accessing external APIs
+* Reading files under `tmp/`
 
 ## Workflow
 There are mainly two steps.
@@ -31,14 +31,14 @@ There are mainly two steps.
 * 2nd step - analyze gap
 
 ### Given workflow statement
-* Output should be Japanese/UTF-8
+* Output should be in Japanese/UTF-8
 
-### before step
-Ask user where is "ToBe" sheet.
-**If there is nothing the sheet, stop workflow.**
+### Before step
+Ask the user where the "ToBe" sheet is located.
+**If no such sheet exists, stop the workflow.**
 
 ### 1st step - understand feature(s) AsIs
-Goal is to understand target feature(s)
+The goal is to understand the target feature(s).
 
 Summary:
 
@@ -49,12 +49,12 @@ Summary:
 
 Detail:
 
-* [ ] Receive feature path from user
-* [ ] Understand target feature(s)
+* [ ] Receive the feature path from the user
+* [ ] Understand the target feature(s)
   * [ ] You can output them as memory under `/tmp`
 
 ### 2nd step - analyze gap
-Goal is find gap between AsIs and ToBe
+The goal is to find the gap between AsIs and ToBe.
 
 Summary:
 
@@ -65,18 +65,18 @@ Summary:
 
 Detail:
 
-* [ ] Receive ToBe sheet path
-  * If path is not pointed, stop workflow
-* [ ] **Before start follows, AskUserQuestion 5+ for clearing flow.**
+* [ ] Receive the ToBe sheet path
+  * If no path is provided, stop the workflow
+* [ ] **Before starting the steps below, use AskUserQuestion 5+ times to clarify the flow.**
 * [ ] Research the gap between AsIs and ToBe
-* [ ] Organize gap info
-* [ ] Output report
+* [ ] Organize the gap info
+* [ ] Output the report
   * Format follows "Output format → Gap analysis"
   * File should be `report/{yyyymmdd-HHMM}-{title}-gap-analysis.md`
 
 **Remarks**:
-* No technical words for developers like `variable`, `class`, `DB`, `file`
-* Think markdown reader as "Most near by end user"
+* Avoid developer-oriented technical terms like `variable`, `class`, `DB`, `file`
+* Treat the markdown reader as the audience "closest to the end user"
 
 ## Output format
 ### Gap analysis
@@ -116,7 +116,7 @@ There are no specification
 ```
 
 **Remarks**:
-When output as Japanese, style should be `だ/である`
+When outputting in Japanese, the style should be `だ/である`.
 
 Example:
 ```
@@ -133,17 +133,18 @@ Example:
 
 **挙動 - 正常/異常**
 * 正常
-  * (keep) ブログコンテンツが表示される
-  * (change) ライターが隠しモードにしている今鉄は表示されない
-* invalid
-  * (keep) 存在しないブログコンテンツにアクセスすると404が表示される
+  * ブログコンテンツが表示される
+  * ライターが隠しモードにしている記事は表示されない
+* 異常
+  * 存在しないブログコンテンツにアクセスすると404が表示される
 
 ### ToBe
 **挙動 - 正常/異常**
 * 正常
   * (keep) ブログコンテンツが表示される
-  * (change) ライターが隠しモードにしている今鉄は表示されない
-* invalid
+  * (change) **隠しモードは廃止される**
+    * 隠しモードの記事はすべて論理削除する
+* 異常
   * (keep) 存在しないブログコンテンツにアクセスすると404が表示される
 
 ### 問題
